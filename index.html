@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Bazinga</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220610004013">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#c7cbcc">
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#273a43">
+
+	<script>
+		if (matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+			document.documentElement.style.display = 'none';
+			document.head.insertAdjacentHTML(
+				'beforeend',
+				'<link rel="stylesheet" href="css/light.css?_v=20220610004013" onload="document.documentElement.style.display=\'\'">'
+			);
+		}
+	</script>
+
+	<link rel="stylesheet" href="css/light.css?_v=20220610004013" media="(prefers-color-scheme: light)">
+	<link rel="stylesheet" href="css/dark.css?_v=20220610004013" media="(prefers-color-scheme: dark)">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220610004013" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__wrapper">
+				<div class="header__box">
+					<a href="index.html" class="header__logo">
+						Baz<span>in</span>ga
+					</a>
+					<div class="header__body">
+						<!-- <button class="header__theme">
+					<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M12.1465 0.0899344C12.035 0.148899 11.9258 0.261258 11.8658 0.378943C11.7732 0.560575 11.7676 0.664923 11.7676 2.21197C11.7676 3.75965 11.7731 3.86331 11.8659 4.04519C11.9764 4.26195 12.2577 4.43474 12.5 4.43474C12.7423 4.43474 13.0236 4.26195 13.1341 4.04519C13.2269 3.86331 13.2324 3.75965 13.2324 2.21197C13.2324 0.664288 13.2269 0.560624 13.1341 0.378748C12.954 0.0254008 12.5129 -0.103569 12.1465 0.0899344ZM3.92583 3.55076C3.57661 3.70948 3.40596 4.0745 3.51836 4.42238C3.59727 4.66639 5.68242 6.78139 5.99199 6.93132C6.28599 7.07367 6.54204 7.02482 6.78711 6.77963C7.01714 6.54949 7.07456 6.29404 6.95869 6.01642C6.85391 5.76532 4.79199 3.68886 4.51338 3.55389C4.26899 3.43547 4.18062 3.43503 3.92583 3.55076ZM20.4824 3.55501C20.2042 3.69272 18.1441 5.77001 18.0413 6.01642C17.9254 6.29404 17.9829 6.54949 18.2129 6.77963C18.458 7.02482 18.714 7.07367 19.008 6.93132C19.3176 6.78139 21.4027 4.66639 21.4816 4.42238C21.594 4.0745 21.4234 3.70948 21.0742 3.55076C20.8187 3.43469 20.7239 3.43537 20.4824 3.55501ZM11.9141 5.92975C10.1681 6.14202 8.96699 6.70162 7.83521 7.82995C5.71387 9.94485 5.29785 13.2678 6.83193 15.8436C7.11519 16.3192 7.24351 16.4859 7.92729 17.2671C8.52368 17.9484 8.76157 18.5788 8.83657 19.6766C8.86133 20.0393 8.90449 20.4139 8.93247 20.5091C8.99414 20.7189 9.28833 21.2176 9.45151 21.3891C9.56621 21.5095 9.57031 21.5385 9.57031 22.2251C9.57031 22.6163 9.59272 23.0546 9.62017 23.1992C9.78647 24.0766 10.4947 24.7852 11.3716 24.9516C11.7119 25.0161 13.2881 25.0161 13.6284 24.9516C14.5053 24.7852 15.2135 24.0766 15.3798 23.1992C15.4073 23.0546 15.4297 22.6185 15.4297 22.2302V21.5241L15.595 21.3308C15.9743 20.8875 16.1621 20.3564 16.1621 19.7273C16.1621 19.0455 16.4082 18.2005 16.7609 17.6709C16.8583 17.5246 17.0776 17.2511 17.2482 17.063C18.1027 16.1208 18.5754 15.271 18.8698 14.1476C19.1886 12.9311 19.1444 11.6243 18.7437 10.4152C17.9984 8.16654 16.0553 6.47055 13.7117 6.02316C13.3067 5.94588 12.2382 5.89033 11.9141 5.92975ZM13.1235 7.41618C14.8008 7.62663 16.2883 8.65946 17.0445 10.1388C17.9986 12.0053 17.7483 14.2125 16.4031 15.7949C15.7143 16.6051 15.5586 16.8085 15.3595 17.158C14.9766 17.8303 14.6973 18.8858 14.6973 19.6605C14.6973 20.119 14.5837 20.3656 14.3079 20.5064C14.1263 20.5991 14.0225 20.6048 12.5 20.6048C10.9775 20.6048 10.8737 20.5991 10.6921 20.5064C10.4177 20.3663 10.3028 20.1186 10.3025 19.6663C10.3021 18.9134 10.0955 18.0394 9.75635 17.3561C9.52983 16.8997 9.30308 16.5851 8.78789 16.0127C8.32397 15.4972 8.16118 15.2576 7.88403 14.6826C7.54526 13.9799 7.41309 13.3958 7.40562 12.5686C7.4021 12.1814 7.42725 11.7363 7.46357 11.5427C7.96519 8.8685 10.422 7.07729 13.1235 7.41618ZM11.792 8.90372C10.4904 9.14554 9.40547 10.1093 9.00801 11.377C8.90068 11.7193 8.93755 11.95 9.13569 12.1758C9.21631 12.2677 9.35947 12.3683 9.45386 12.3995C9.86309 12.5346 10.2196 12.2998 10.4262 11.759C10.7497 10.912 11.4468 10.3814 12.3291 10.3107C12.7689 10.2754 13.0074 10.156 13.1341 9.90743C13.4099 9.36664 13.0348 8.82487 12.3921 8.83582C12.25 8.83826 11.98 8.86879 11.792 8.90372ZM0.378955 11.8633C0.172803 11.9722 0 12.2604 0 12.4953C0 12.7377 0.172705 13.0192 0.389355 13.1298C0.571143 13.2225 0.674756 13.2281 2.22168 13.2281C3.7686 13.2281 3.87222 13.2225 4.054 13.1298C4.27065 13.0192 4.44336 12.7377 4.44336 12.4953C4.44336 12.2529 4.27065 11.9715 4.054 11.8609C3.87188 11.7679 3.771 11.7626 2.21143 11.7647C0.665332 11.7667 0.550049 11.7729 0.378955 11.8633ZM20.9356 11.8633C20.7294 11.9722 20.5566 12.2604 20.5566 12.4953C20.5566 12.7377 20.7293 13.0192 20.946 13.1298C21.1278 13.2225 21.2314 13.2281 22.7783 13.2281C24.3252 13.2281 24.4289 13.2225 24.6106 13.1298C24.8273 13.0192 25 12.7377 25 12.4953C25 12.2529 24.8273 11.9715 24.6106 11.8609C24.4285 11.7679 24.3276 11.7626 22.7681 11.7647C21.222 11.7667 21.1067 11.7729 20.9356 11.8633ZM13.9648 22.5119C13.9648 23.0561 13.867 23.2887 13.5755 23.4375C13.4034 23.5254 13.2884 23.5359 12.5 23.5359C11.7116 23.5359 11.5966 23.5254 11.4245 23.4375C11.133 23.2887 11.0352 23.0561 11.0352 22.5119V22.0703H12.5H13.9648V22.5119Z"
+							fill="white" />
+					</svg>
+				</button> -->
+						<fieldset class="header__switcher switcher">
+							<legend class="switcher__legend">Схема</legend>
+							<input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" value="light" aria-label="Светлая">
+							<input class="switcher__radio switcher__radio--auto" type="radio" name="color-scheme" value="auto" aria-label="Системная" checked>
+							<input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" value="dark" aria-label="Тёмная">
+							<div class="switcher__status"></div>
+						</fieldset>
+						<button class="icon-menu">
+							<div></div>
+						</button>
+						<div class="header__menu menu">
+							<nav class="menu__body">
+								<a class="menu__logo" href="index.html">Bazinga</a>
+								<ul class="menu__list">
+									<li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+									<li class="menu__item"><a href="design.html" class="menu__link">UX/UI Design</a></li>
+									<li class="menu__item"><a href="frontend.html" class="menu__link">Front-end</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__wrapper">
+				<section class="intro _page-section page__screen">
+					<div class="intro__container screen__content">
+
+						<div class="intro__text">
+							<h1 class="intro__title">
+								Create it now
+							</h1>
+							<a class="intro__link">
+								build your website
+							</a>
+						</div>
+						<div class="intro__parallax parallax" data-swiper-parallax-opacity="0" data-swiper-parallax="-50%" data-swiper-parallax-duration="1000">
+							<div class="parallax__images images-parallax">
+
+								<div class="images-parallax__item">
+									<div class="images-parallax__decor-2">
+
+									</div>
+								</div>
+								<div class="images-parallax__item">
+									<div class="images-parallax__decor-1">
+
+									</div>
+								</div>
+								<div class="images-parallax__item">
+									<div class="images-parallax__laptop">
+
+									</div>
+								</div>
+							</div>
+							<div class="images-parallax__contacts-link-1"></div>
+							<div class="images-parallax__contacts-link-2"></div>
+							<div class="images-parallax__contacts-link-3"></div>
+						</div>
+						<a class="intro__link--adaptive">
+							build your website
+						</a>
+
+
+					</div>
+				</section>
+				<section id="design" class="info design _page-section page__screen">
+					<div class="info__container">
+						<div class="info__box screen__content">
+							<div class="info__card" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+								<div class="info__text">
+									<h2 class="info__title">
+										UX/UI Design
+									</h2>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa phasellus sodales
+										luctus
+										vulputate a imperdiet. Platea aliquam pellentesque rhoncus quam. Consectetur tempus,
+										quisque consectetur volutpat elementum vitae ultrices proin lacus. Dictum velit
+										morbi
+										arcu at faucibus non purus elementum.
+									</p>
+								</div>
+								<a href="design.html" target="_blank" class="info__link">
+									More information
+								</a>
+								<picture><source srcset="img/info/info-img-1.webp" type="image/webp"><img src="img/info/info-img-1.png" alt="UX/UI Design" class="info__img"></picture>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="frontend" class="info frontend _page-section page__screen">
+					<div class="info__container">
+						<div class="info__box screen__content">
+							<div class="info__card" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+								<div class="info__text">
+									<h2 class="info__title">
+										Front-end
+									</h2>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa phasellus sodales
+										luctus
+										vulputate a imperdiet. Platea aliquam pellentesque rhoncus quam. Consectetur tempus,
+										quisque consectetur volutpat elementum vitae ultrices proin lacus. Dictum velit
+										morbi
+										arcu at faucibus non purus elementum.
+									</p>
+								</div>
+								<a href="frontend.html" class="info__link">
+									More information
+								</a>
+								<picture><source srcset="img/info/info-img-2.webp" type="image/webp"><img src="img/info/info-img-2.png" alt="Front-end" class="info__img"></picture>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div id="page__pagination" class="page__pagination">
+
+			</div>
+			<div class="page__scroll"></div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+
+	<div id="page-preloader" class="preloader">
+		<div class="loader"></div>
+		<p class="preloader__bazinga">
+			Bazinga
+		</p>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20220610004013"></script> -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220610004013"></script>
+	<script src="js/app.min.js?_v=20220610004013"></script>
+</body>
+
+</html>
